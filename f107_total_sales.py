@@ -1,9 +1,7 @@
 sales = int(input('How many did you sell today? '))
 
 try:
-	f = open('sales.txt',
-		     encoding='UTF-8',
-		     mode='r')
+	f = open('sales.txt', encoding='UTF-8', mode='r')
 except FileNotFoundError:
 	current_total = 0
 else:
@@ -14,9 +12,7 @@ else:
 		current_total = int(s)
 	f.close()
 
-f = open('sales.txt',
-		 encoding='UTF-8',
-		 mode='w')
+f = open('sales.txt', encoding='UTF-8', mode='w')
 new_total = current_total + sales
 f.write(str(new_total))
 f.close()

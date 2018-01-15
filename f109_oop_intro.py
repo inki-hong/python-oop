@@ -16,6 +16,9 @@ def attack_player():
 	print('monster attacks player')
 	player_life = player_life - monster_power
 
+
+
+
 import random
 while True:
 	if random.random() < 0.5:

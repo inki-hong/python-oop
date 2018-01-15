@@ -15,9 +15,23 @@ class Sedan():
 	def set_mileage(self, mileage):
 		self.mileage = mileage
 
-alice_sedan = Sedan('Alice', 'ABCDE', 10000)
+
+
+
+
+
+
+
+
+
+
+
+
+
 new_sedan = Sedan()
-old_sedan = Sedan(mileage=20000)
 print(new_sedan.owner)
 print(new_sedan.plate_no)
 print(new_sedan.mileage)
+
+old_sedan = Sedan(mileage=20000)
+alice_sedan = Sedan('Alice', 'ABCDE', 10000)

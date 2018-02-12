@@ -6,6 +6,18 @@ class Grandparent():
 		print('Anything')
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 class Father(Grandparent):
 	def __init__(self):
 		self.common_data = 1
@@ -21,6 +33,9 @@ class Father(Grandparent):
 		print('McDonalds')
 
 
+
+
+
 class Mother(Grandparent):
 	def __init__(self):
 		self.common_data = 22
@@ -34,6 +49,10 @@ class Mother(Grandparent):
 	def speak(self):
 		Grandparent.speak(self)
 		print('Burger King')
+
+
+
+
 
 class Child(Father, Mother):
 	def __init__(self):
@@ -51,10 +70,22 @@ class Child(Father, Mother):
 		Father.speak(self)
 		print('Wendy\'s')
 
-child = Child()
-child.set_paternal_data('qwerty')
-# print(child.get_paternal_data())
-child.set_maternal_data('dvorak')
-# print(child.get_maternal_data())
-# child.speak()
-# print(child.common_data)
+
+
+if __name__ == '__main__':
+	child = Child()
+	child.set_paternal_data('qwerty')
+	# print(child.get_paternal_data())
+	child.set_maternal_data('dvorak')
+	# print(child.get_maternal_data())
+	# child.speak()
+	# print(child.common_data)
+
+
+
+
+
+
+
+
+#

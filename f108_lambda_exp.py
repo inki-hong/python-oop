@@ -9,6 +9,19 @@ f = lambda x: x**2
 b = f(2)
 print(b)
 
+print('-' * 40)
+
+
+numbers = [1, 2, 3, 4, 5]
+# sq = map(square, numbers)
+sq = map(lambda x: x**2, numbers)
+print(list(sq))
+print('-' * 40)
+
+
+
+
+
 
 
 

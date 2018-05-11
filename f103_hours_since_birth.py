@@ -7,11 +7,31 @@ def hours_since_birth(birthdate):
 	hours = hours + (delta.seconds / (60.0 * 60.0))
 	return hours
 
-bd = datetime.datetime(year=1982, month=10, day=10, hour=4)
-print(hours_since_birth(bd))
+year, month, day = input('Enter birthdate (yyyy-mm-dd): ').split('-')
+
+bd = datetime.datetime(
+	year=int(year), month=int(month), day=int(day)
+)
+print('Hours since birth: {:.2f}'.format(hours_since_birth(bd)))
+
+
+
+
 
 def hundredth_day_since_birth(birthdate):
 	return birthdate + datetime.timedelta(days=100)
 
-bd = datetime.date(year=1982, month=10, day=10)
-print(hundredth_day_since_birth(bd))
+bd = datetime.date(
+	year=int(year), month=int(month), day=int(day)
+)
+print('100th day since birth:', hundredth_day_since_birth(bd))
+
+
+
+
+
+
+
+
+
+#

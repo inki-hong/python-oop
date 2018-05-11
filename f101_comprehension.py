@@ -31,7 +31,18 @@ print('-' * 40)
 ####################################
 
 
+
+
+
+
+
+
+
+
 # 2-dimensional (nested) list comprehension
+
+# 1-dimensional list
+# [(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), ...]
 
 my_list = []
 for x in range(3):
@@ -43,9 +54,27 @@ my_list = [(x, y)
 		   for x in range(3)
 		   for y in range(4)]
 print(my_list)
-
 print('-' * 40)
-####################################
+
+
+# 2-dimensional (nested) list comprehension
+
+# 2-dimensional list
+# [[(0, 0), (0, 1), (0, 2), (0, 3)],
+#  [(1, 0), (1, 1), (1, 2), (1, 3)], ...]
+
+my_list = []
+for x in range(3):
+	inner_list = []
+	for y in range(4):
+		inner_list.append( (x, y) )  # tuple
+	my_list.append(inner_list)
+print(my_list)
+
+my_list = [[(x, y) for y in range(4)] for x in range(3)]
+print(my_list)
+
+
 
 
 my_list = [(x, y)
@@ -58,27 +87,24 @@ print('-' * 40)
 ####################################
 
 
-my_str = 'applejuice'
-my_list = [c.upper()
-		   for c in my_str
-           if c in ('a','e','i','o','u')]
-my_str = ''.join(my_list)
-print(my_str)
-print('-' * 40)
-####################################
 
 
-my_list = [x % 5 for x in range(10)]
+
+
+
+
+
+
+my_list = [x % 5 for x in range(10)]  # list comprehension
 print(my_list)
 
-my_set = {x % 5 for x in range(10)}
+my_set = {x % 5 for x in range(10)}  # set comprehension
 print(my_set)
 
-my_dict = {str(n): n ** 2
-           for n in range(6)}
+my_dict = {str(n): n ** 2 for n in range(6)}  # dict comprehension
 print(my_dict)
 
-my_tuple = tuple(x % 5 for x in range(10))
+my_tuple = tuple(x % 5 for x in range(10))  # tuple comprehension
 print(my_tuple)
 
 g = (x % 5 for x in range(10))  # generator expression
@@ -112,3 +138,7 @@ print(''.join(my_list))
 my_list = [c.upper() if c in ('a', 'e', 'i', 'o', 'u') else c
            for c in 'applejuice']
 print(''.join(my_list))
+
+
+
+#

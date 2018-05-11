@@ -30,3 +30,8 @@ alice_sedan.set_mileage(10000)
 print(alice_sedan.owner)
 print(alice_sedan.plate_no)
 print(alice_sedan.mileage)
+
+
+
+
+#

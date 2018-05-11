@@ -3,18 +3,43 @@ f = open('some_text.txt',
 	     mode='rt')
 
 s = f.read()
-print(s)
 
-# for line in f:
-# 	print(line, end='')
+print(s)
 
 f.close()
 
 print('-' * 40)
-########################################
+
+
+
+
+
+
+
+
+
+
+f = open('some_text.txt',
+	     encoding='UTF-8',
+	     mode='rt')
+
+for line in f:
+	print(line, end='')
+
+f.close()
+
+print('-' * 40)
+
+
+
+
+
+
+
+
 import datetime
 
-f = open('profile.txt')
+f = open('profile.txt', encoding='UTF-8')
 
 line_no = 1
 for line in f:
@@ -25,7 +50,7 @@ for line in f:
 	elif line_no == 3:
 		if line[-1] == '\n':
 			line = line[:-1]
-		dt = datetime.datetime.strptime(line, '%Y-%m-%d')
+		dt = datetime.datetime.strptime(line, '%Y/%m/%d')
 		fmt = dt.strftime('%B, %d %Y')
 		print('DOB: {}'.format(fmt), end='')
 	line_no += 1

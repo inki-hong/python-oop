@@ -18,16 +18,6 @@ class Sedan():
 
 
 
-
-
-
-
-
-
-
-
-
-
 new_sedan = Sedan()
 print(new_sedan.owner)
 print(new_sedan.plate_no)
@@ -35,3 +25,13 @@ print(new_sedan.mileage)
 
 old_sedan = Sedan(mileage=20000)
 alice_sedan = Sedan('Alice', 'ABCDE', 10000)
+
+
+
+
+
+
+
+
+
+#

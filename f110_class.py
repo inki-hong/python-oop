@@ -1,7 +1,7 @@
 # class statement (복합문)
 class Sedan():
 	# print('Hi')
-	no_of_doors = 4
+	no_of_doors = 4  # class attribute
 
 print(Sedan)
 print(type(Sedan))
@@ -18,7 +18,7 @@ print('-' * 40)
 
 
 
-# instantiation
+# instantiation 개체화
 
 alice_sedan = Sedan()
 bob_sedan = Sedan()
@@ -44,3 +44,13 @@ alice_sedan.mileage = 10000
 print('Alice 번호판', alice_sedan.plate_no)
 print('Bob 번호판', bob_sedan.plate_no)
 print('클래스 번호판', Sedan.plate_no)
+
+
+
+
+
+
+
+
+
+#

@@ -1,17 +1,17 @@
 class Parent():
-	common = 'parent class attribute'
+	common = 'Common Data'
 
 	def __init__(self):
-		self.parent_data = 'parent instance attribute'
+		self.parent_data = 'Parent Data'
 
 	def get_name(self):
-		return 'parent class'
+		return 'Parent Class'
 
 
 class Child(Parent):
 	def __init__(self):
 		Parent.__init__(self)
-		self.child_data = 'child instance attribute'
+		self.child_data = 'Child Data'
 
 
 
@@ -26,3 +26,12 @@ print(c.get_name())
 print(Child.get_name(c))
 print(isinstance(c, Child))
 print(isinstance(c, Parent))
+
+
+
+
+
+
+
+
+#

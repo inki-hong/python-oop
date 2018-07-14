@@ -72,21 +72,15 @@ print('-' * 40)
 
 
 
-td = datetime.timedelta(hours=9)
-tz = datetime.timezone(td)
+delta = datetime.timedelta(hours=9)
+tz_korea = datetime.timezone(delta)
 t4 = datetime.time(hour=10,
 	               minute=30,
 	               second=20,
-	               tzinfo=tz)
-print(t4)
+	               tzinfo=tz_korea)
+print('aware time', t4)
 
 print('-' * 40)
-
-
-
-
-
-
 
 
 
@@ -103,8 +97,8 @@ dt2 = datetime.datetime(year=today.year,
 	                    hour=10,
 	                    minute=30,
 	                    second=20,
-	                    tzinfo=tz)
-print(dt2)
+	                    tzinfo=tz_korea)
+print('aware datetime', dt2)
 print('-' * 40)
 
 
@@ -114,7 +108,7 @@ print('-' * 40)
 
 
 
-dt3 = datetime.datetime.now(tz=tz)  # "tz" instead of "tzinfo"
+dt3 = datetime.datetime.now(tz=tz_korea)  # "tz" instead of "tzinfo"
 print(dt3)
 
 print('dt3 is {} dt2'.format(
@@ -122,7 +116,7 @@ print('dt3 is {} dt2'.format(
 ))
 
 print('-' * 40)
-########################################
+
 
 
 
@@ -137,7 +131,7 @@ tz2 = datetime.timezone(offset=datetime.timedelta(hours=-5))
 print(tz1, tz2)
 
 print('-' * 40)
-########################################
+
 
 
 

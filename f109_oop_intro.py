@@ -6,28 +6,32 @@ monster_name = 'Dragon'
 monster_life = 10
 monster_power = 4
 
-def attack_monster():
-	global monster_life
+def attack_monster(monster_life):
 	print('player attacks monster')
-	monster_life = monster_life - player_power
+	new_monster_life = monster_life - player_power
+	return new_monster_life
 
-def attack_player():
-	global player_life
+def attack_player(player_life):
 	print('monster attacks player')
-	player_life = player_life - monster_power
-
+	new_player_life = player_life - monster_power
+	return new_player_life
 
 
 
 import random
 while True:
 	if random.random() < 0.5:
-		attack_monster()
+		monster_life = attack_monster(monster_life)
 	else:
-		attack_player()
+		player_life = attack_player(player_life)
+
 	if player_life <= 0:
 		print('player dead')
 		break
 	elif monster_life <= 0:
 		print('monster dead')
 		break
+
+
+
+#
